@@ -1,0 +1,42 @@
+[[language]]
+name = "javascript"
+formatter = { command = 'prettierd', args = [".js"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettierd', args = [".ts"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+formatter = { command = 'prettierd', args = [".jsx"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+formatter = { command = 'prettierd', args = [".tsx"] }
+auto-format = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+[[language]]
+name = "python"
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
+auto-format = true
+language-servers = [ "ruff" ]
+
+[[language]]
+name = "hcl"
+language-servers = [ "terraform-ls" ]
+language-id = "terraform"
+
+[[language]]
+name = "tfvars"
+language-servers = [ "terraform-ls" ]
+language-id = "terraform-vars"
+
+[language-server.terraform-ls]
+command = "terraform-ls"
+args = ["serve"]
