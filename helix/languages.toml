@@ -23,9 +23,9 @@ command = "ruff"
 args = ["server"]
 [[language]]
 name = "python"
-formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
+formatter = { command = "ruff", args = ["format", "--stdin-filename", "{}", "-"] }
 auto-format = true
-language-servers = [ "ruff" ]
+language-servers = [ "ruff", "pyright"]
 
 [[language]]
 name = "hcl"
